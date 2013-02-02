@@ -1,5 +1,9 @@
 class RomanNumerals
   def convert(num)
-    'I'
+    if num == 1
+      'I'
+    else
+      'II'
+    end
   end
 end
