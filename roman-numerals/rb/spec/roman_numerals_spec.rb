@@ -56,4 +56,12 @@ describe RomanNumerals do
     end
   end
 
+  context "between forty and fifty" do
+
+    it "converts numbers in the fortys" do
+      @numerals.convert(40).should == 'XL'
+      @numerals.convert(42).should == 'XLII'
+    end
+  end
+
 end
