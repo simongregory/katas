@@ -108,6 +108,13 @@ describe RomanNumerals do
       @numerals.convert(109).should == 'CIX'
       @numerals.convert(111).should == 'CXI'
       @numerals.convert(119).should == 'CXIX'
+      @numerals.convert(138).should == 'CXXXVIII'
+      @numerals.convert(149).should == 'CXLIX'
+      @numerals.convert(150).should == 'CL'
+      @numerals.convert(163).should == 'CLXIII'
+      @numerals.convert(200).should == 'CC'
+      @numerals.convert(400).should == 'CD'
+      @numerals.convert(500).should == 'D'
     end
   end
 end
