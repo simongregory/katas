@@ -67,4 +67,10 @@ describe RomanNumerals do
     end
   end
 
+  context "between fifty and ninety" do
+
+    it "converts numbers in the fiftys" do
+      @numerals.convert(50).should == 'L'
+    end
+  end
 end
