@@ -21,6 +21,12 @@ class RomanNumerals
   def convert(num)
     numeral = ''
 
+    fifty_count = 50/50
+
+    if fifty_count == 1
+      numeral << 'L'
+    end
+
     ten_count = num/10
 
     if ten_count == 4
