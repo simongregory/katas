@@ -11,10 +11,14 @@ describe RomanNumerals do
     @numerals = nil
   end
 
-  describe "converting numbers from one to ten" do
+  describe "turning integers into roman numerals" do
 
-    it "takes 1 and returns I" do
+    it "converts 1 into I" do
       @numerals.convert(1).should == 'I'
+    end
+
+    it "converts 2 into II" do
+      @numerals.convert(2).should == 'II'
     end
   end
 end
