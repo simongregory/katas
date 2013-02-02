@@ -71,6 +71,24 @@ describe RomanNumerals do
 
     it "converts numbers in the fiftys" do
       @numerals.convert(50).should == 'L'
+      @numerals.convert(51).should == 'LI'
+      @numerals.convert(55).should == 'LV'
+      @numerals.convert(59).should == 'LIX'
+
+      @numerals.convert(60).should == 'LX'
+      @numerals.convert(61).should == 'LXI'
+      @numerals.convert(65).should == 'LXV'
+      @numerals.convert(69).should == 'LXIX'
+
+      @numerals.convert(70).should == 'LXX'
+      @numerals.convert(71).should == 'LXXI'
+      @numerals.convert(75).should == 'LXXV'
+      @numerals.convert(79).should == 'LXXIX'
+
+      @numerals.convert(80).should == 'LXXX'
+      @numerals.convert(81).should == 'LXXXI'
+      @numerals.convert(85).should == 'LXXXV'
+      @numerals.convert(89).should == 'LXXXIX'
     end
   end
 end
