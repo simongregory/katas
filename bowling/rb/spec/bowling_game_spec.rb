@@ -23,5 +23,14 @@ describe BowlingGame do
       @bowling_game.score.should == 20
     end
 
+    it "scores 14 when one spare frame is bowled" do
+      @bowling_game.roll(5)
+      @bowling_game.roll(5)
+      @bowling_game.roll(2)
+      18.times { @bowling_game.roll(0)}
+
+      @bowling_game.score.should == 14
+    end
+
   end
 end
