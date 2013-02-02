@@ -13,23 +13,32 @@ describe BowlingGame do
 
   describe "score" do
 
-    it "scores 0 when all bowls hit the gutter" do
+    it "totals 0 when all bowls hit the gutter" do
       20.times { @bowling_game.roll(0) }
       @bowling_game.score.should == 0
     end
 
-    it "scores 20 when all bowls take a pin down" do
+    it "totals 20 when all bowls take a pin down" do
       20.times { @bowling_game.roll(1) }
       @bowling_game.score.should == 20
     end
 
-    it "scores 14 when one spare frame is bowled" do
+    it "totals 14 when one spare frame is bowled" do
       @bowling_game.roll(5)
       @bowling_game.roll(5)
       @bowling_game.roll(2)
-      18.times { @bowling_game.roll(0)}
+      17.times { @bowling_game.roll(0)}
 
       @bowling_game.score.should == 14
+    end
+
+    it "totals 30 when a strike is bowled" do
+      @bowling_game.roll(10)
+      @bowling_game.roll(5)
+      @bowling_game.roll(5)
+      16.times { @bowling_game.roll(0)}
+
+      @bowling_game.score.should == 30
     end
 
   end
