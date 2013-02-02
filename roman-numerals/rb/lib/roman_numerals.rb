@@ -1,9 +1,8 @@
 class RomanNumerals
   def convert(num)
-    if num == 1
-      'I'
-    else
-      'II'
-    end
+    numeral = ''
+    num.times { numeral << 'I'}
+
+    numeral
   end
 end
