@@ -11,22 +11,19 @@ describe RomanNumerals do
     @numerals = nil
   end
 
+  examples = { 'I'   => 1,
+               'II'  => 2,
+               'III' => 3,
+               'IV'  => 4,
+               'V'   => 5 }
+
   describe "turning integers into roman numerals" do
 
-    it "converts 1 into I" do
-      @numerals.convert(1).should == 'I'
+    examples.each do |numeral, integer|
+      it "converts #{integer} into #{numeral}" do
+        @numerals.convert(integer).should == numeral
+      end
     end
 
-    it "converts 3 into III" do
-      @numerals.convert(3).should == 'III'
-    end
-
-    it "converts 4 into IV" do
-      @numerals.convert(4).should == 'IV'
-    end
-
-    it "converts 5 into V" do
-      @numerals.convert(4).should == 'IV'
-    end
   end
 end
