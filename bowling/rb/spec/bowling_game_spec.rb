@@ -14,6 +14,7 @@ describe BowlingGame do
   describe "score" do
 
     it "scores 0 when all bowls hit the gutter" do
+      20.times { @bowling_game.roll(0) }
       @bowling_game.score.should == 0
     end
 
