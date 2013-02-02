@@ -35,14 +35,25 @@ describe RomanNumerals do
 
   end
 
-  context "between ten and twenty" do
+  context "between ten and thirty nine" do
 
-    it "converts 14 to XIV" do
+    it "converts numbers in the tens" do
       @numerals.convert(14).should == 'XIV'
-    end
-
-    it "converts 19 to XIX" do
+      @numerals.convert(15).should == 'XV'
       @numerals.convert(19).should == 'XIX'
     end
+
+    it "converts numbers in the twentys" do
+      @numerals.convert(21).should == 'XXI'
+      @numerals.convert(24).should == 'XXIV'
+      @numerals.convert(28).should == 'XXVIII'
+    end
+
+    it "converts numbers in the thirtys" do
+      @numerals.convert(31).should == 'XXXI'
+      @numerals.convert(36).should == 'XXXVI'
+      @numerals.convert(39).should == 'XXXIX'
+    end
   end
+
 end
