@@ -17,8 +17,8 @@ describe RomanNumerals do
       @numerals.convert(1).should == 'I'
     end
 
-    it "converts 4 into IIII" do
-      @numerals.convert(4).should == 'IIII'
+    it "converts 3 into III" do
+      @numerals.convert(3).should == 'III'
     end
   end
 end
