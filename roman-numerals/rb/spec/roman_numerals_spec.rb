@@ -17,12 +17,8 @@ describe RomanNumerals do
       @numerals.convert(1).should == 'I'
     end
 
-    it "converts 2 into II" do
-      @numerals.convert(2).should == 'II'
-    end
-
-    it "converts 3 into III" do
-      @numerals.convert(3).should == 'III'
+    it "converts 4 into IIII" do
+      @numerals.convert(4).should == 'IIII'
     end
   end
 end
