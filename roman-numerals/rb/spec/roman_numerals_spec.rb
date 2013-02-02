@@ -73,15 +73,18 @@ describe RomanNumerals do
                'MMXIII' => 2013
              }
 
-  context "up to twenty" do
+  context "from one to over two thousand" do
 
     examples.each do |numeral, integer|
-
       it "converts #{integer} into #{numeral}" do
         @numerals.convert(integer).should == numeral
       end
-
     end
 
+    examples.each do |numeral, integer|
+      it "reverts #{numeral} into #{integer}" do
+        @numerals.revert(numeral).should == integer
+      end
+    end
   end
 end
