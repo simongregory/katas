@@ -100,4 +100,14 @@ describe RomanNumerals do
       @numerals.convert(99).should == 'XCIX'
     end
   end
+
+  context "between one hundred and four hundred" do
+    it "converts numbers" do
+      @numerals.convert(100).should == 'C'
+      @numerals.convert(101).should == 'CI'
+      @numerals.convert(109).should == 'CIX'
+      @numerals.convert(111).should == 'CXI'
+      @numerals.convert(119).should == 'CXIX'
+    end
+  end
 end
