@@ -20,5 +20,9 @@ describe RomanNumerals do
     it "converts 3 into III" do
       @numerals.convert(3).should == 'III'
     end
+
+    it "converts 4 into IV" do
+      @numerals.convert(4).should == 'IV'
+    end
   end
 end
