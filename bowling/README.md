@@ -18,3 +18,13 @@ Write a class named "Game" that has two methods
 
   roll(pins) is called each time the player rolls a ball. The argument is the number of pins knocked down.
   score()    is called only at the very end of the game. It returns the total score for that game.
+
+## Steps
+
+The original kata outlines the steps to take. This reduces the ambiguity that leaks from the rules and requirements. For me how you go about deducing these steps is just as important as the code you write. So decide if you want to read any further, if not return once you're done and compare.
+
+1. Boilerplate the project
+2. All bowls hit the gutter
+3. All bowls take down one pin
+4. Spare one of the frames
+5. Strike one of the frames
