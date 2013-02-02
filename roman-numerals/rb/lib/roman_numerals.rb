@@ -19,13 +19,20 @@ class RomanNumerals
     :M    => 1000 }
 
   def convert(num)
+    numeral = ''
+
     ten_count = num/10
+
+    if ten_count == 4
+      numeral << 'XL'
+    else
+      numeral << 'X'*ten_count
+    end
+
     remainder = num%10
+    numeral << find(remainder)
 
-    tens = 'X'*ten_count
-    ones = find(remainder)
-
-    tens + ones
+    numeral
   end
 
   private
