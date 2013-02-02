@@ -61,6 +61,9 @@ describe RomanNumerals do
     it "converts numbers in the fortys" do
       @numerals.convert(40).should == 'XL'
       @numerals.convert(42).should == 'XLII'
+      @numerals.convert(45).should == 'XLV'
+      @numerals.convert(48).should == 'XLVIII'
+      @numerals.convert(49).should == 'XLIX'
     end
   end
 
