@@ -24,5 +24,9 @@ describe RomanNumerals do
     it "converts 4 into IV" do
       @numerals.convert(4).should == 'IV'
     end
+
+    it "converts 5 into V" do
+      @numerals.convert(4).should == 'IV'
+    end
   end
 end
