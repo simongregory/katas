@@ -12,39 +12,37 @@ class RomanNumerals
     :IX   => 9,
     :X    => 10 }
 
-    OVER_TEN = {
-    :L    => 50,
-    :C    => 100,
-    :D    => 500,
-    :M    => 1000 }
+  #L = 50, C = 100, D = 500, M = 1000
 
   def convert(num)
     numeral = ''
 
-    if num == 90
-      return 'XC'
-    elsif num > 90
-      return 'XC' + find(num-90)
+    if num > 99
+      numeral << 'C'
+      num -= 100
     end
 
-    fifty_count = num/50
+    if num > 89
+      numeral << 'XC'
+      num -= 90
+    end
 
-    if fifty_count == 1
+    if num > 49
       numeral << 'L'
       num -= 50
     end
 
-    ten_count = num/10
-
-    if ten_count == 4
+    if num > 39
       numeral << 'XL'
-    else
-      numeral << 'X'*ten_count
+      num -= 40
     end
 
-    remainder = num%10
-    numeral << find(remainder)
+    while num > 9
+      numeral << 'X'
+      num -= 10
+    end
 
+    numeral << find(num)
     numeral
   end
 
