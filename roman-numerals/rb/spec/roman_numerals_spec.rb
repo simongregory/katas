@@ -91,4 +91,13 @@ describe RomanNumerals do
       @numerals.convert(89).should == 'LXXXIX'
     end
   end
+
+  context "between ninety and one hundred" do
+    it "converts numbers in the nineties" do
+      @numerals.convert(90).should == 'XC'
+      @numerals.convert(91).should == 'XCI'
+      @numerals.convert(95).should == 'XCV'
+      @numerals.convert(99).should == 'XCIX'
+    end
+  end
 end

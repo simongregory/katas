@@ -21,6 +21,12 @@ class RomanNumerals
   def convert(num)
     numeral = ''
 
+    if num == 90
+      return 'XC'
+    elsif num > 90
+      return 'XC' + find(num-90)
+    end
+
     fifty_count = num/50
 
     if fifty_count == 1
