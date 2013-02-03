@@ -1,0 +1,4 @@
+To run the unit tests use:
+
+    python -m unittest discover
+
