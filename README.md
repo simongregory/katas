@@ -4,8 +4,8 @@ For best results sharpen on a daily basis. Focus on Form.
 
 ## Performed
 
-The Bowling Ball
-Roman Numeral
+The Bowling Ball  
+Roman Numeral  
 
 ## Backlog
 
