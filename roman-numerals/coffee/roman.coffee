@@ -1,16 +1,19 @@
 module.exports = class Roman
 
+  list = [
+    { arabic:10, roman:'X'  }
+    { arabic:9,  roman:'IX' }
+    { arabic:5,  roman:'V'  }
+    { arabic:4,  roman:'IV' }
+    { arabic:1,  roman:'I'  }
+  ]
+
   convert: (num)->
-    if num == 5
-      return "V"
+    numeral = ''
 
-    if num == 4
-      return "IV"
+    for marker in list
+      while num >= marker.arabic
+        numeral += marker.roman
+        num -= marker.arabic
 
-    if num == 3
-      return "III"
-
-    if num == 2
-      return "II"
-
-    "I"
+    numeral
