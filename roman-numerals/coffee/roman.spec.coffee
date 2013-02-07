@@ -5,7 +5,7 @@ describe "Roman Numeral Converter", ->
   beforeEach ->
     @roman = new Roman
 
-  it "converts arabic numbers to roman", ->
+  it "converts arabic numbers to roman numerals", ->
     list = [
       { arabic:1,  roman:'I'   }
       { arabic:2,  roman:'II'  }
