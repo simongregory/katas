@@ -7,23 +7,28 @@ class BowlingGame
 
   def roll(pins)
     @scores << pins
-    @scores << 0 if pins == 10
   end
 
   def score
     total = 0
-    spare = false
-    strike = false
+    i = 0
 
-    @scores.each_slice(2) do |frame|
-      frame_total = frame.inject(0, :+)
+    while i < 10
 
-      total += frame_total
-      total += frame[0] if spare
-      total += frame[1] if strike
+      current = @scores[i] || 0
+      following = @scores[i+1] || 0
+      third = @scores[i+2] || 0
 
-      spare = (frame_total == 10)
-      strike = (frame[0] == 10)
+      if current == 10 #strike
+        total += current + following + third
+      elsif current + following == 10 #spare
+        total += current + following + third
+        i += 1
+      else
+        total += current + following
+      end
+
+      i += 1
     end
 
     total
