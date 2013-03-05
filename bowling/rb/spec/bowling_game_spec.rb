@@ -41,5 +41,10 @@ describe BowlingGame do
       @bowling_game.score.should == 30
     end
 
+    it "totals 300 when a perfect game is played" do
+      12.times { @bowling_game.roll(10) }
+
+      @bowling_game.score.should == 300
+    end
   end
 end
