@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Failed...
+# gmcs BowlingGameTest.cs
+# mono BowlingGameTest.exe
+
+# Failed...
+#mcs BowlingGame.cs BowlingGameTest.cs -reference:nunit.framework.dll
+
+gmcs -t:library -r:nunit.framework.dll -out:RunTests.dll *.cs
+if [ $? -eq 0 ]; then
+  nunit-console -nologo RunTests.dll
+fi
