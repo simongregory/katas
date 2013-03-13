@@ -2,4 +2,5 @@
 *.jar
 roman-numerals/scala/target
 roman-numerals/scala/project
-
+TestResult.xml
+*.dll
